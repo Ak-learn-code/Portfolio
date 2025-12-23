@@ -1,10 +1,77 @@
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Poortfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mein Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Hallo mir geht es gut </h1>    
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Hauptnavigation">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="#home" class="text-xl font-semibold text-indigo-600">Ak-learn-code</a>
+        </div>
+
+        <!-- Desktop links -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="#home" class="text-gray-700 hover:text-indigo-600">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-indigo-600">Über mich</a>
+          <a href="#projects" class="text-gray-700 hover:text-indigo-600">Projekte</a>
+          <a href="#contact" class="text-gray-700 hover:text-indigo-600">Kontakt</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <span class="sr-only">Menü öffnen</span>
+            <!-- Hamburger icon -->
+            <svg id="icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <!-- Close icon (hidden by default) -->
+            <svg id="icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Home</a>
+          <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Über mich</a>
+          <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Projekte</a>
+          <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page content -->
+  <main id="home" class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Hallo, mir geht es gut.</h1>
+    <p class="text-gray-600 mb-6">Willkommen auf meinem Portfolio. Scrolle nach unten oder nutze die Navigation, um mehr zu erfahren.</p>
+
+    <!-- Beispielabschnitte passend zu den Nav-Links -->
+    <section id="about" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-2">Über mich</h2>
+      <p class="text-gray-600">Hier kannst du etwas über dich schreiben.</p>
+    </section>
+
+    <section id="projects" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-2">Projekte</h2>
+      <p class="text-gray-600">Liste deiner Projekte oder Links zu GitHub-Repos.</p>
+    </section>
+
+    <section id="contact" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-2">Kontakt</h2>
+      <p class="text-gray-600">Wie dich Besucher erreichen können.</p>
+    </section>
+  </main>
+
 </body>
+</html>
